@@ -54,8 +54,8 @@ RSpec.describe Post, type: :model do
   end
   it 'should update the post counter' do
     old_cpt = subject.user.posts_counter
-    subject.update_posts_counter 
-    expect(subject.user.posts_counter).to eql (old_cpt + 1)
+    subject.update_posts_counter
+    expect(subject.user.posts_counter).to eql(old_cpt + 1)
   end
 
   it 'likes_counter must be integer' do
@@ -76,6 +76,4 @@ RSpec.describe Post, type: :model do
   it 'should return 5 recent comments' do
     expect(subject.recent_comments).to eq(subject.comments.order(created_at: :desc).limit(5))
   end
-
-
 end
