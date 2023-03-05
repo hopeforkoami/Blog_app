@@ -1,7 +1,7 @@
 require_relative '../rails_helper'
 
 RSpec.describe Post, type: :model do
-  author = User.create(name: 'Koami NOGBEDJI', photo:'https://linktomyphoto.com/koami_profil', bio: 'my self')
+  author = User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'my self')
   subject do
     Post.new(title: 'post title', text: 'this is a text for the post', comments_counter: 20, likes_counter: 30,
              author_id: author.id)
@@ -17,7 +17,7 @@ RSpec.describe Post, type: :model do
   it 'title should be present' do
     subject.title = nil
     expect(subject).to_not be_valid
-  end 
+  end
 
   it 'title should not be too long' do
     subject.title = 't' * 300
@@ -71,5 +71,4 @@ RSpec.describe Post, type: :model do
   it 'should return 5 recent comments' do
     expect(subject.recent_comments).to eq(subject.comments.order(created_at: :desc).limit(5))
   end
-
 end

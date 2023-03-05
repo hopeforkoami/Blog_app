@@ -1,13 +1,15 @@
 require_relative '../rails_helper'
 
 RSpec.describe Comment, type: :model do
-  let(:user) { User.create(name: 'Koami NOGBEDJI', photo:'https://linktomyphoto.com/koami_profil', bio: 'my self') }
-  let(:post) { Post.create(title: 'post title', text: 'this is a text for the post', comments_counter: 20, likes_counter: 30,
-                           author_id: user.id) }
+  let(:user) { User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'my self') }
+  let(:post) do
+    Post.create(title: 'post title', text: 'this is a text for the post', comments_counter: 20, likes_counter: 30,
+                author_id: user.id)
+  end
   subject { Comment.new(text: 'this is a comment', user_id: user.id, post_id: post.id) }
 
   before { subject.save }
-  
+
   it 'is valid with valid attributes' do
     expect(subject).to be_valid
   end
@@ -23,5 +25,4 @@ RSpec.describe Comment, type: :model do
     subject.post = nil
     expect(subject).to_not be_valid
   end
-
 end
