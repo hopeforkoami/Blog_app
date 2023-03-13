@@ -1,8 +1,5 @@
-class PostsController <ApplicationController
-  def inedex
-    
-  end
-  def show
-    
-  end
+class PostsController < ApplicationController
+  def inedex; end
+
+  def show; end
 end
