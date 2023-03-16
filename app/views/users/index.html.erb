@@ -1,3 +1,6 @@
-<section>
-  This is the Users index page.
-</section>
+  <h2 class="user_list_title">Users</h2>
+  <div class="user_list_section">
+    <% @users.each do |user| %>
+      <%= render partial: 'partial/user', locals: { user: user } %>
+    <% end %>
+  </div>

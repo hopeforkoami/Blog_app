@@ -1,0 +1,37 @@
+.user_list_section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #0e0a0a;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-content: center;
+    justify-content: center;
+
+}
+.user_container {
+  display: flex;
+  height: 100px;
+  width: 400px;
+  border: 2px solid #0e0a0a;
+  gap: 0.5em;
+}
+.user_details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  padding-right: 0.5em;
+}
+.user_post_counter{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.link_to_user_posts {
+  text-decoration: none;
+  color: #0e0a0a;
+}
