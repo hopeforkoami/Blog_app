@@ -35,3 +35,82 @@
   text-decoration: none;
   color: #0e0a0a;
 }
+.show_user_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #0e0a0a;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.user_infos{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  border: 2px solid #0e0a0a;
+}
+.user_name {
+  font-size: xx-large;
+  margin-bottom: 0;
+}
+.auser_details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  padding-right: 0.5em;
+}
+.user_bio{
+  font-size: large;
+  text-align: left;
+  width: 100%;
+  margin-top: 1em;
+  border: 2px solid black;
+}
+.div_title{
+  font-weight: bold;
+  padding-left: 10px ;
+}
+.div_content{
+  padding-left: 10px ;
+}
+.div_footer{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px ;
+}
+.post_list{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+  padding: 0;
+  margin-top: 1em;
+  align-items: center;
+}
+.user_post {
+  border: 2px solid black;
+  width: 100%;
+  margin: 0;
+}
+.button{
+  border: 2px solid black;
+  padding: 0.5em;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  box-shadow: #0e0a0a 0px 0px 5px;
+  text-decoration: none;
+  color: #0e0a0a;
+}
+.button:hover{
+  background-color: #0e0a0a;
+  color: #fff;
+}

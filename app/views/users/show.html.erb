@@ -1,3 +1,23 @@
-<section>
-  this is the User show page.
+<section class="show_user_section">
+  <div class="user_infos">
+    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_1280.png" alt=<%= @user.name %> class="user_avatar">
+    <div class="auser_details">
+      <h3 class="user_name"><%= link_to @user.name, user_path(id: @user.id) %></h3>
+      <p class="user_post_counter">
+        Number of posts: <b> <%= @user.posts_counter %></b>
+      </p>
+    </div>
+  </div>
+  <div class="user_bio">
+    <p class="div_title">Bio </p>
+    
+    <p class="div_content"><%= @user.bio %></p>
+  </div>
+  <div class="post_list">
+      <% @user.posts.each do |post| %>
+        <%= render partial: 'partial/post', locals: { post: post } %>
+      <% end %>
+     
+  </div>
+   <%= link_to "See all posts", user_posts_path(user_id: @user.id), class: "button"%>
 </section>
