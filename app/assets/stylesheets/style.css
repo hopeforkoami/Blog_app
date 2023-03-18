@@ -114,3 +114,20 @@
   background-color: #0e0a0a;
   color: #fff;
 }
+.comment_list{
+  border: 2px solid black;
+  width: 100%;
+  margin: 0;
+  margin-top: 1px;
+  margin-bottom: 1em;
+}
+.with_comments{
+  gap: 0!important;
+}
+.post_header{
+  display: flex;
+  justify-content: space-between;
+}
+.details{
+  margin-right: 0.5em;
+}
