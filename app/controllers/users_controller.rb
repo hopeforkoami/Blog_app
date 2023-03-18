@@ -1,4 +1,4 @@
-require_relative '../models/user.rb'
+require_relative '../models/user'
 class UsersController < ApplicationController
   def index
     @users = User.all
