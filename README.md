@@ -136,7 +136,11 @@ You can deploy this project using:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
+ - Integration specs for Views and fixing n+1 problems
+ - Add API
+ - Add Devise
+ - Add authorization rules
+ - API documentation
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
