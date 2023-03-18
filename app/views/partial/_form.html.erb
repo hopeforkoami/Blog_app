@@ -1,0 +1,5 @@
+<%= form_with model: @post, url: new_user_post_path, local: true do |form| %>
+  <%= form.text_field  :title %>
+  <%= form.text_area :text %>
+  <%= form.submit "Save"%>
+<% end %>
