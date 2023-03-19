@@ -1,0 +1,7 @@
+<section class="add_form_section">
+  <%= form_with model: @comment, method:"post", url: user_post_comments_path, class:"form", local: true do |form| %>
+  <%= form.text_field  :text , class: "form_input" , placeholder: "Enter your comment here "%>
+  <%= form.submit "Save" , class: "form_button button"%>
+<% end %>
+
+</section>

@@ -150,3 +150,42 @@
 .details {
   margin-right: 0.5em;
 }
+
+.add_form_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #0e0a0a;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5em;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.5em;
+  border: 2px solid #0e0a0a;
+  border-radius: 5px;
+}
+
+.form_text_area {
+  width: 100%;
+  padding: 0.5em;
+  border: 2px solid #0e0a0a;
+  border-radius: 5px;
+}
