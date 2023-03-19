@@ -16,17 +16,14 @@ class PostsController < ApplicationController
   end
 
   def create 
-    puts"getting in the create method"
-    puts "creating current user"
     @post = Post.new(post_params)
     @post.author_id = current_user.id
 
     respond_to do |format|
       if @post.save
-        puts"inside the if statement of the response"
-        redirect_to user_path(current_user.id)
+        format.html{redirect_to user_path(current_user.id)}
+        
       else
-        puts"inside the ifelse statement of the response"
         render :new
       end
     end
