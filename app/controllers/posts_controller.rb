@@ -10,19 +10,19 @@ class PostsController < ApplicationController
   end
 
   def new
-    @current_user = self.current_user
+    @current_user = current_user
     @post = Post.new
-    puts"getting out of the new method"
+    puts 'getting out of the new method'
   end
 
-  def create 
+  def create
     @post = Post.new(post_params)
     @post.author_id = current_user.id
 
     respond_to do |format|
       if @post.save
-        format.html{redirect_to user_path(current_user.id)}
-        
+        format.html { redirect_to user_path(current_user.id) }
+
       else
         render :new
       end
