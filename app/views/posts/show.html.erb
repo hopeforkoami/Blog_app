@@ -16,7 +16,7 @@
       </p>
       </div>
       <div class="comment_list">
-        <% @post.comments.each do |comment| %>
+        <% @post.comments.includes(:post).each do |comment| %>
           <%= render partial: 'partial/comment', locals: { comment: comment } %>
         <% end %>
       </div>
