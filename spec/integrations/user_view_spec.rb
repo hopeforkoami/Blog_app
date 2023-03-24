@@ -3,8 +3,8 @@ require'rails_helper'
 RSpec.describe 'User', type: :feature do
 
     before(:each) do
-      @author = User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'developper and author')
-      @user1 = User.create(name: 'Enoque Macanda', photo: 'https://linktomyphoto.com/enoque_profil', bio: 'developper and commenter')
+      @user1 = User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'developper and author')
+      @author = User.create(name: 'Enoque Macanda', photo: 'https://linktomyphoto.com/enoque_profil', bio: 'developper and commenter')
       @post = Post.create(title: 'post job', text: 'Job Searching
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat semper ex, 
         rutrum dictum diam euismod sit amet. Maecenas vitae urna metus. Fusce tempor facilisis scelerisque. Vivamus fermentum, 
@@ -49,7 +49,7 @@ RSpec.describe 'User', type: :feature do
         expect(page).to have_content("Number of posts: #{@author.posts.count}") 
       end
       it 'should redirect to user show page' do
-        click_link 'Koami NOGBEDJI'
+        click_link 'Enoque Macanda'
   
         expect(page).to have_current_path "/users/#{@author.id}"
       end
