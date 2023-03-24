@@ -1,7 +1,7 @@
 require'rails_helper'
 
-RSpec.describe 'PostIndex', type: :feature do
-  describe'post show page' do
+RSpec.describe 'User', type: :feature do
+
     before(:each) do
       @author = User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'developper and author')
       @user1 = User.create(name: 'Enoque Macanda', photo: 'https://linktomyphoto.com/enoque_profil', bio: 'developper and commenter')
@@ -16,39 +16,25 @@ RSpec.describe 'PostIndex', type: :feature do
       Comment.create(text: 'Thanks', user_id: @user1.id, post_id: @post.id)
       Comment.create(text: 'Your are welcome', user_id: @author.id, post_id: @post.id)
       Like.create(author_id: @user1.id, post_id: @post.id)
-      visit user_posts_path(user_id: @author.id)
+      visit users_path
     end
 
-    it 'should contain the post title' do
-      expect(page).to have_content('post job')
+    describe 'Index page' do
+      it 'should show all users name' do
+        expect(page).to have_content(@author.name)
+      end
+  
+      it 'should display image' do
+        expect(page).to have_selector("img[src='#{@author.photo}']")
+      end
+      it'it should contain the number of the user posts' do
+        expect(page).to have_content("Number of posts: #{@author.posts.count}") 
+      end
+      it 'should redirect to user show page' do
+        click_link 'Koami NOGBEDJI'
+  
+        expect(page).to have_current_path "/users/#{@author.id}"
+      end
     end
 
-    it 'should contain the post author' do
-      expect(page).to have_content('Koami NOGBEDJI')
-    end
-
-    it 'should contain the comments counter' do
-      expect(page).to have_content('Comments: 4')
-    end
-
-    it 'should contain the likes counter' do
-      expect(page).to have_content('Likes: 1')
-    end
-
-    it 'should contain the post body' do
-      expect(page).to have_content('Job Searching')
-    end
-
-    it 'should contain the user name of each commentor' do
-      expect(page).to have_content('Enoque Macanda')
-    end
-    it 'should contain the comment text' do
-      visit user_post_path(@author.id, @post.id)
-      expect(page).to have_content('Nice topic, it is very hard to find one')
-      expect(page).to have_content('Thanks, the LORD will favour us')
-      expect(page).to have_content('Thanks')
-      expect(page).to have_content('Your are welcome')
-    end
-
-  end
 end
