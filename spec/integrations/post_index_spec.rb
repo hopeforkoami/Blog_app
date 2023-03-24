@@ -1,27 +1,27 @@
-require'rails_helper'
+require 'rails_helper'
 
 RSpec.describe 'PostIndex', type: :system do
-  describe'post index page' do
+  describe 'post index page' do
     before(:each) do
       @author = User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'my self')
-      @post = Post.create(title: 'post title', text: 'this is a text for the post',author_id: @author.id)
+      @post = Post.create(title: 'post title', text: 'this is a text for the post', author_id: @author.id)
       @comment = Comment.create(text: 'this is first a comment', user_id: @author.id, post_id: @post.id)
-       Like.create(author_id: @author.id, post_id: @post.id)
+      Like.create(author_id: @author.id, post_id: @post.id)
       visit user_posts_path(user_id: @author.id)
     end
 
-    it'it should contain the user profil' do
-      expect(page).to have_selector('img[src="https://linktomyphoto.com/koami_profil"]') 
+    it 'it should contain the user profil' do
+      expect(page).to have_selector('img[src="https://linktomyphoto.com/koami_profil"]')
     end
-    it'it should contain the user name' do
-      expect(page).to have_content('Koami NOGBEDJI') 
+    it 'it should contain the user name' do
+      expect(page).to have_content('Koami NOGBEDJI')
     end
-    it'it should contain the number of the user posts' do
+    it 'it should contain the number of the user posts' do
       expect(page).to have_content('Number of posts:
-1') 
+1')
     end
-    it'it should contain the post title' do
-      expect(page).to have_content('post title') 
+    it 'it should contain the post title' do
+      expect(page).to have_content('post title')
     end
     it 'it should contain the post body' do
       expect(page).to have_content 'this is a text for the post'
@@ -44,7 +44,7 @@ RSpec.describe 'PostIndex', type: :system do
     end
     it 'when user clicks on a post, it redirects to that posts show page' do
       click_link 'post title'
-      expect(page).to have_current_path user_post_path(user_id:@author.id, id:@post.id)
+      expect(page).to have_current_path user_post_path(user_id: @author.id, id: @post.id)
     end
   end
 end

@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'UsersController', type: :request do
-  
   before(:each) do
-    @author = User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'my self',posts_counter: 20)
+    @author = User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'my self',
+                          posts_counter: 20)
   end
 
   describe ' GET #index' do
