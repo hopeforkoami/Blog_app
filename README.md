@@ -140,6 +140,7 @@ You can deploy this project using:
  - Add API
  - Add Devise
  - Add authorization rules
+ - Add tests
  - API documentation
 
 
