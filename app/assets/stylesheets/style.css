@@ -189,3 +189,37 @@
   border: 2px solid #0e0a0a;
   border-radius: 5px;
 }
+
+/* style the login form */
+.new_user {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  width: 100%;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.5em;
+  border: 2px solid #0e0a0a;
+  border-radius: 5px;
+}
+
+.more_actions {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 2em;
+}
