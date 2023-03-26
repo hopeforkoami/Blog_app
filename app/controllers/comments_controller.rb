@@ -1,4 +1,17 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
+  def index
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:post_id])
+    @comments = @post.comments
+  end
+
+  def show
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+  end
   def new
     @comment = Comment.new
   end
