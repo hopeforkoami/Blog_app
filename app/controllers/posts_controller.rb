@@ -29,7 +29,15 @@ class PostsController < ApplicationController
       end
     end
   end
-
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to user_posts_path(current_user.id), notice: 'Post was successfully destroyed.'
+    else
+      flash.new[:alert] = @post.errors.full_messages.first if @post.errors.any?
+      render :show, status: 400
+    end
+  end
   private
 
   def post_params
