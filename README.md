@@ -130,6 +130,12 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://twitter.com/KNogbedji)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hopeforkoami/)
 
+👤 **Benjamin Ejike**
+
+- GitHub: [@githubhandle](https://github.com/osbentech)
+- Twitter: [@twitterhandle](https://twitter.com/EjikeOsegbo)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/benjamin-ejike-632248206)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
