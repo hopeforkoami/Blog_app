@@ -6,7 +6,7 @@
   <p class="div_footer">
     Comments: <%= post.comments_counter %> , Likes: <%= post.likes_counter %>
   </p>
-  <% if can? :delete, @post %>
-    <%= link_to "Delete Post",class="button", user_post_path(user_id: @post.author.id, id: @post.id), data: { turbo_method: :delete } %>
+  <% if can? :delete, post %>
+    <%= link_to "Delete Post",user_post_path(user_id: post.author_id, id: post.id),class:"button",  data: { turbo_method: :delete } %>
   <% end %>
 </div>
