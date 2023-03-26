@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -12,6 +10,7 @@ class Ability
       can :read, :all
       can :manage, Post, author_id: user.id
       can :manage, Comment, user_id: user.id
+    end
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?

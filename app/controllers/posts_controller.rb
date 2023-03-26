@@ -29,6 +29,7 @@ class PostsController < ApplicationController
       end
     end
   end
+
   def destroy
     @post = Post.find(params[:id])
     if @post.destroy
@@ -38,6 +39,7 @@ class PostsController < ApplicationController
       render :show, status: 400
     end
   end
+
   private
 
   def post_params
