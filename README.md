@@ -122,13 +122,19 @@ You can deploy this project using:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-- ## 👤 Author <a name="authors"></a>
+- ## 👤 Authors <a name="authors"></a>
  
 👤 **Koami NOGBEDJI**
 
 - GitHub: [@githubhandle](https://github.com/hopeforkoami)
 - Twitter: [@twitterhandle](https://twitter.com/KNogbedji)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hopeforkoami/)
+
+👤 **Benjamin Ejike**
+
+- GitHub: [@githubhandle](https://github.com/osbentech)
+- Twitter: [@twitterhandle](https://twitter.com/EjikeOsegbo)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/benjamin-ejike-632248206)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
