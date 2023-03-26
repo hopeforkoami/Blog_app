@@ -18,6 +18,9 @@
       <div class="comment_list">
         <% @post.comments.includes(:post).each do |comment| %>
           <%= render partial: 'partial/comment', locals: { comment: comment } %>
+          <% if can? :delete, comment %>
+            <%= link_to "Delete Comment",class="button", user_post_comment_path(user_id: comment.author.id, post_id: comment.post.id, id: comment.id), data: { turbo_method: :delete } %>
+          <% end %>
         <% end %>
       </div>
       <%= link_to "Add Comment", new_user_post_comment_path(user_id: @user.id, post_id: @post.id), class: "button"%>
