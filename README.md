@@ -131,6 +131,12 @@ You can deploy this project using:
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hopeforkoami/)
 
 
+👤 **ANAS ALSAMMARRAIE**
+
+- GitHub: [@anas599](https://github.com/anas599)
+- Twitter: [@anas599](https://twitter.com/anas599)
+- LinkedIn: [anas1993](https://linkedin.com/in/anas1993)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
