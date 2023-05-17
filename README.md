@@ -62,7 +62,7 @@ The **Blog app** is a classic example of a blog website. It is a fully functiona
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,7 +115,7 @@ To run all tests, including unit and integration tests, run the following comman
 You can deploy this project using:
 
 ```
-  N/A
+
 ```
 
 
@@ -136,6 +136,12 @@ You can deploy this project using:
 - GitHub: [@anas599](https://github.com/anas599)
 - Twitter: [@anas599](https://twitter.com/anas599)
 - LinkedIn: [anas1993](https://linkedin.com/in/anas1993)
+
+👤 **Victor Aderibigbe**
+
+- GitHub: [@githubhandle](https://github.com/v0pe)
+- Twitter: [@twitterhandle](https://twitter.com/de_vope)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/victor-aderibigbe/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
