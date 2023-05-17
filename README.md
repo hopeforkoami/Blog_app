@@ -136,7 +136,12 @@ You can deploy this project using:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
+ - Integration specs for Views and fixing n+1 problems
+ - Add API
+ - Add Devise
+ - Add authorization rules
+ - Add tests
+ - API documentation
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -163,6 +168,6 @@ If you like this project and want to support me make cooler projects Give this p
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

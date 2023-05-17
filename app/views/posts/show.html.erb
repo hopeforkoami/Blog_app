@@ -1,0 +1,26 @@
+<section class="show_user_section">
+  <div class="post_list with_comments">     
+      <div class="user_post">
+        <div class="post_header">
+          <%= link_to @post.title.concat(' By ').concat(@user.name), user_post_path(user_id: @post.author_id,id: @post.id), class: "div_title" %>
+          <div class="details">
+            Comments: <%= @post.comments_counter %> , Likes: <%= @post.likes_counter %>
+          </div>
+        </div>
+        
+      <p class="div_content">
+        <%= @post.text %>
+      </p>
+      <p class="div_footer">
+        Comments: <%= @post.comments_counter %> , Likes: <%= @post.likes_counter %>
+      </p>
+      </div>
+      <div class="comment_list">
+        <% @post.comments.includes(:post).each do |comment| %>
+          <%= render partial: 'partial/comment', locals: { comment: comment } %>
+        <% end %>
+      </div>
+      <%= link_to "Add Comment", new_user_post_comment_path(user_id: @user.id, post_id: @post.id), class: "button"%>
+     
+  </div>
+</section>
